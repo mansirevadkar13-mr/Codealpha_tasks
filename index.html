@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Responsive Image Gallery</h1>
+
+    <div class="buttons">
+        <button onclick="filterImages('all')">All</button>
+        <button onclick="filterImages('nature')">Nature</button>
+        <button onclick="filterImages('city')">City</button>
+    </div>
+
+    <div class="gallery">
+        <img src="images/img1.jpg" class="nature" onclick="openImage(0)">
+        <img src="images/img2.jpg" class="city" onclick="openImage(1)">
+        <img src="images/img3.jpg" class="nature" onclick="openImage(2)">
+        <img src="images/img4.jpg" class="city" onclick="openImage(3)">
+        <img src="images/img5.jpg" class="nature" onclick="openImage(4)">
+        <img src="images/img6.jpg" class="city" onclick="openImage(5)">
+    </div>
+
+    <div class="popup" id="popup">
+        <span class="close" onclick="closeImage()">&times;</span>
+
+        <button class="prev" onclick="prevImage()">❮</button>
+
+        <img id="popupImg">
+
+        <button class="next" onclick="nextImage()">❯</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
